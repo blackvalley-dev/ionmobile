@@ -3,12 +3,16 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
+import { UsersPage } from '../pages/users/users'
+import { FirebaseConfigService } from '../core/service/firebase-config.service'
+import { UserProvider } from '../providers/user.provider'
 
 @NgModule({
   declarations: [
     MyApp,
     Page1,
-    Page2
+    Page2,
+    UsersPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -17,8 +21,12 @@ import { Page2 } from '../pages/page2/page2';
   entryComponents: [
     MyApp,
     Page1,
-    Page2
+    Page2,
+    UsersPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},
+    FirebaseConfigService,
+    UserProvider
+  ]
 })
 export class AppModule {}
