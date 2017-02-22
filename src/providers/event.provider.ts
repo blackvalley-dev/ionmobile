@@ -4,16 +4,16 @@ import { FirebaseConfigService } from '../core/service/firebase-config.service'
 
 import { Observable } from 'rxjs/Observable'
 @Injectable()
-export class UserProvider{
+export class EventProvider{
 
-    private userdb = this.fire.getDatabase().ref('/users')
+    private eventdb = this.fire.getDatabase().ref('/events')
 
     constructor (private fire: FirebaseConfigService){}
     //create listener for users in the database
-    getAddedUsers():Observable<any>{
+    getAddedEvents():Observable<any>{
       return Observable.create(obs=>{
-        this.userdb.on('child_added', user =>{
-          obs.next(user.val())//gets data from user and converts to json
+        this.eventdb.on('child_added', event =>{
+          obs.next(event.val())//gets data from user and converts to json
         },
         err =>{
 
@@ -21,7 +21,7 @@ export class UserProvider{
       })
     }
 
-    getUsers() {
-      return this.userdb
+    getEvents() {
+      return this.eventdb
     }
 }

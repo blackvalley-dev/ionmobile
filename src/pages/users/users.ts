@@ -11,44 +11,43 @@ import { UserProvider } from '../../providers/user.provider'
 export class UsersPage {
 
 
-
+  private userdb = this.userpro.getUsers()
+  private users : any[]
   constructor(public navCtrl: NavController, public navParams: NavParams,
                   private userpro: UserProvider,) {}
 
 
-      public userdb = this.userpro.getUsers()
-      private users : any[]
+
 
 
   ionViewDidLoad() {
     this.users=[]
     console.log('ionViewDidLoad UsersPage');
     //this.getAddedUsers()
-    this.getData()
+    this.getAddedUsers()
 
   }
-  get Users(){
-    return this.users
+  userSelected(user){
+
   }
 
-  getData (){
-
-    this.userdb.on('child_added', (snapshot)=>{
-        console.log(snapshot.val())
-        this.users.push(snapshot.val())
-    })
-  }
-
-  // getAddedUsers(){
   //
-  //     this.users.getAddedUsers()
-  //           .subscribe(user=> {
-  //             alert(user)
-  //           },
-  //           err =>{
-  //              console.error("Unable to add user - ", err)
-  //           })
+  // getData (){
   //
-  //
+  //   this.userdb.on('child_added', (snapshot)=>{
+  //       console.log(snapshot.val())
+  //       this.users.push(snapshot.val())
+  //   })
   // }
+
+  getAddedUsers(){
+      this.userpro.getAddedUsers()
+            .subscribe(user=> {
+              console.log(user)
+              this.users.push(user)
+            },
+            err =>{
+               console.error("Unable to add user - ", err)
+            })
+  }
 }

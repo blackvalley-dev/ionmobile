@@ -6,13 +6,16 @@ import { Page2 } from '../pages/page2/page2';
 import { UsersPage } from '../pages/users/users'
 import { FirebaseConfigService } from '../core/service/firebase-config.service'
 import { UserProvider } from '../providers/user.provider'
+import { EventProvider } from '../providers/event.provider'
+import { EventsPage } from '../pages/events/events'
 
 @NgModule({
   declarations: [
     MyApp,
     Page1,
     Page2,
-    UsersPage
+    UsersPage,
+    EventsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -22,11 +25,13 @@ import { UserProvider } from '../providers/user.provider'
     MyApp,
     Page1,
     Page2,
-    UsersPage
+    UsersPage,
+    EventsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},
     FirebaseConfigService,
-    UserProvider
+    UserProvider,
+    EventProvider
   ]
 })
 export class AppModule {}

@@ -1,0 +1,61 @@
+{
+  "users" : {
+    "-K2ib4H77rj0LYewF7dP" : {
+      "email":"pauldhammond3@gmail.com",
+      "img":"img-src",
+      "bio":{
+        "fname": "Paul",
+        "lname":"Hammond",
+        "class":"Senior",
+        "field":"Computer Science",
+        "school":"North Carolina A&T",
+        "birthDate":"08/31/1994",
+        "graduation month":"December 2016",
+        "isEntrepreneur":true
+      },
+      "business":{
+        "name":"Black Valley",
+        "incepted":2016,
+        "img":"img-src",
+        "bio":"Network of the top ...",
+        "Goal":"Change the Face of Tech Forever",
+        "title":"Co-Founder"
+      }
+    },
+    "-K2ib5JHRbbL0NrztUfO" : {
+      "email":"franklindakari@gmail.com",
+      "img":"img-src",
+      "bio":{
+        "fname": "Paul",
+        "lname":"Hammond",
+        "class":"Senior",
+        "field":"Physics",
+        "school":"Morehoue",
+        "birthDate":"",
+        "graduation month":"December 2016",
+        "isEntrepreneur":true
+      },
+      "business":{
+        "name":"Black Valley",
+        "incepted":2016,
+        "img":"img-src",
+        "bio":"Network of the top ...",
+        "Goal":"Change the Face of Tech Forever",
+        "title":"Co-Founder"
+      }
+    },
+    "-K2ib62mjHh34CAUbide" : {
+      "email":"hallehammond6@gmail.com",
+      "img":"img-src",
+      "bio":{
+        "fname": "Halle",
+        "lname":"Hammond",
+        "school":"North Carolina A&T",
+        "birthDate":"03/08/1998",
+        "graduation month":"May 2020",
+        "class":"Freshman",
+        "field":"Industrial Engineering",
+        "isEntrepreneur":false
+      }
+      }
+}}

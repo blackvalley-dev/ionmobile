@@ -1,7 +1,7 @@
 export const FIREBASE_CONFIG = {
-    apiKey: "AIzaSyDlxfAFsxe3lPWeFkuNAfAPnYxOgcFuE-w",
-    authDomain: "bvweb-5da6d.firebaseapp.com",
-    databaseURL: "https://bvweb-5da6d.firebaseio.com",
-    storageBucket: "bvweb-5da6d.appspot.com",
-    messagingSenderId: "189141172676"
+     apiKey: "AIzaSyBHMCsgIHib_Ee0G2ATzb_jF6DXNg0rwog",
+     authDomain: "bv-ionic.firebaseapp.com",
+     databaseURL: "https://bv-ionic.firebaseio.com",
+     storageBucket: "bv-ionic.appspot.com",
+     messagingSenderId: "87228963206"
   };
